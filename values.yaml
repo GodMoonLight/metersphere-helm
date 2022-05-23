@@ -13,7 +13,7 @@ common:
   imagePrefix: "registry.cn-qingdao.aliyuncs.com/metersphere/"
   imagePullSecrets: nil
   storageClass: default
-  imageTag: v1.20.1-lts
+  imageTag: v1.20.3-lts
   imagePullPolicy: Always
   mysql: 
     host: metersphere-mysql
@@ -103,12 +103,12 @@ jmeter:
 logPersistence:
   enabled: false
   accessModes: ReadWriteOnce
-  size: 1Gi
+  size: 10Gi
 
 dataPersistence:
   enabled: true
   accessModes: ReadWriteOnce
-  size: 1Gi
+  size: 10Gi
 
 mysql:
   enabled: true
@@ -118,7 +118,7 @@ mysql:
   persistence:
     enabled: true
     accessModes: ReadWriteOnce
-    size: 2Gi
+    size: 20Gi
 redis:
   enabled: true
   image: redis
@@ -127,7 +127,7 @@ redis:
   persistence:
     enabled: true
     accessModes: ReadWriteOnce
-    size: 1Gi
+    size: 10Gi
 kafka:
   enabled: true
   image:
